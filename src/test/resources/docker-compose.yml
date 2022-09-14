@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+  study-testdb:
+    image: mysql
+    ports:
+      - 13307 # 테스트컨테이너에서 랜덤으로 매핑해주기 때문에 포트 매핑은 안하는 것이 좋음
+    environment:
+      MYSQL_ROOT_PASSWORD: studytest
+      MYSQL_DATABASE: studytest

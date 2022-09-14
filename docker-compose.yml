@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+  study-testdb:
+    image: mysql
+    ports:
+      - 13307:3307
+    environment:
+      MYSQL_ROOT_PASSWORD: studytest
+      MYSQL_DATABASE: studytest
