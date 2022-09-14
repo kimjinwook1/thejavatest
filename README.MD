@@ -33,4 +33,26 @@ BDD: 애플리케이션이 어떻게 **"행동"해야 하는지**에 대한 공�
 
 @Container
 - 인스턴스 필드에 사용하면 모든 테스트 마다 컨테이너를 재시작 하고, 스태틱 필드에 사용하면 클래스 내부 모든 테스트에서 동일한 컨테이너를 재사용한다.  
-- 
+
+### Testcontainers 기능 살펴보기
+컨테이너 만들기
+- New GenericContainer(String imageName)
+
+네트워크
+- withExposedPorts(int ...)
+- getMappedPort(int)
+
+환경 변수 설정
+- withEnv(key, value)
+
+명령어 실행
+- withCommand(String cmd...)
+
+사용할 준비가 됐는지 확인하기
+- waitingFor(Wait)
+- Wait.forHttp(String url)
+- Wait.forLogMessage(String message)
+
+로그 살펴보기
+- getLogs()
+- followOutput()
