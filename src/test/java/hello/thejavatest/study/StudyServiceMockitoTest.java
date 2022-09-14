@@ -25,7 +25,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 
 //@ExtendWith를 선언해줘야 Mock객체를 제대로 활용할 수 있다.
 @ExtendWith(MockitoExtension.class)
-class StudyServiceTest {
+class StudyServiceMockitoTest {
 
 //	@Test
 //	void createStudyService() {
