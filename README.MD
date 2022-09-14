@@ -19,3 +19,18 @@ BDD: 애플리케이션이 어떻게 **"행동"해야 하는지**에 대한 공�
   - As a/ I want/ so that
 - Acceptance criteria
   - Given/ When/ Then
+  
+## 도커와 테스트
+### TestContainers 소개
+테스트에서 도커 컨테이너를 실행할 수 있는 라이브러리
+- https://www.testcontainers.org/
+- 테스트 실행 시 DB를 설정하거나 별도의 프로그램 또는 스크립트를 실행할 필요가 없다.
+- 보다 Production에 가까운 테스트를 만들 수 있다.
+- 테스트가 느려진다.
+
+@Testcontainers
+- JUnit 5 확장팩으로 테스트 클래스에 @Container를 사용한 필드를 찾아서 컨테이너 라이프사이클 관련 메서드를 실행해준다.
+
+@Container
+- 인스턴스 필드에 사용하면 모든 테스트 마다 컨테이너를 재시작 하고, 스태틱 필드에 사용하면 클래스 내부 모든 테스트에서 동일한 컨테이너를 재사용한다.  
+- 
